@@ -1,0 +1,28 @@
+.sidenav-container {
+  height: 100%;
+}
+
+.sidenav {
+  width: 200px;
+}
+
+mat-sidenav-container {
+  position: sticky;
+  position: -webkit-sticky;
+  z-index: 10;
+  top:0
+}
+
+.toolbar-div {
+  /* position: sticky; */
+  /* top:0; */
+  /* background-color: aqua; */
+  display:flex;
+  justify-content: space-between;
+}
+
+img:focus {
+  outline: none;
+}
+
+

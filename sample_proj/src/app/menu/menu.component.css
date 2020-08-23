@@ -1,0 +1,20 @@
+.flex-menu-component {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+}
+.flex-menu-component-mobail{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.search-card {
+    display: flex;
+    justify-content: space-around
+}
+
+.handset-search-card {
+    display: flex;
+    flex-direction: column
+}

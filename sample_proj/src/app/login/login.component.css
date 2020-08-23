@@ -1,0 +1,28 @@
+.example-container {
+  text-align: center;
+  padding-top: 1%;
+}
+
+.example-container mat-card{
+  display: inline-flex;
+  flex-direction: column;
+  min-width: 30%;
+  height: 40%;
+  max-width: 500px;
+}
+
+.button-login{
+ display: flex;
+ justify-content: space-between
+}
+
+body{
+  background-color: blue;
+}
+.exe-text{
+  text-align: center;
+  font-size: 600%;
+  font-style: unset;
+  color:blue
+  
+}

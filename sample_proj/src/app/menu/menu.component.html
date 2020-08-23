@@ -1,0 +1,40 @@
+<img src="https://via.placeholder.com/350x82" width="100%" height="100%" alt="">
+
+<div  [ngClass]="{'flex-menu-component':!(isHandset$ | async), 'flex-menu-component-mobail':(isHandset$ | async)}" >
+  <mat-card>
+    <mat-card-content>
+      <img src="https://via.placeholder.com/375x150" width="100%" height="100%" alt="">
+      <p>
+        The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+        bred for hunting.
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+        <button mat-button type="button" routerLink="/pendingaproval">Pending Aprovals</button>
+    </mat-card-actions>
+  </mat-card>
+  <mat-card >
+    <mat-card-content>
+        <img src="https://via.placeholder.com/375x150" width="100%" height="100%" alt="">
+      <p>
+        The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+        bred for hunting.
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button type="button" routerLink="/admangement">AD Management</button>
+    </mat-card-actions>
+  </mat-card>
+  <mat-card>
+    <mat-card-content>
+        <img src="https://via.placeholder.com/375x150" width="100%" height="100%" alt="">
+      <p>
+        The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+        bred for hunting.
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+        <button type="button" mat-button routerLink="/transaction">Transaction</button>
+      </mat-card-actions>
+  </mat-card>
+</div>

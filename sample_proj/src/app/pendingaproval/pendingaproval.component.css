@@ -1,0 +1,38 @@
+.exe-aproval{
+  display: flex;
+  justify-content:space-around;
+}
+/* 
+
+.example-card {
+  width: 100%;
+  height: auto;
+} */
+
+.mat-list-icon {
+  color: rgba(0, 0, 0, 0.54);
+}
+
+/* mat-list {
+  width: 100%;
+  height: auto
+}  */
+
+mat-accordion {
+  width: 100%;
+  height: auto
+}
+
+mat-card {
+  width: 70%;
+  height: auto
+}
+.offers img {
+  width: 100%;
+  height: auto
+}
+
+.pichi {
+  height: 60vh;
+  background-color: black;
+}

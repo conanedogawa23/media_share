@@ -1,0 +1,42 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav
+    #drawer
+    class="sidenav"
+    fixedInViewport="true"
+    [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+    [mode]="(isHandset$ | async) ? 'over' : 'side'"
+    [opened]="!(isHandset$ | async)">
+    <mat-toolbar color="primary">
+    </mat-toolbar>
+    <mat-nav-list>
+        <a mat-button routerLink="/menu"><b>Home</b> </a>
+        <a mat-button routerLink="/aboutus"><b>About Us</b> </a>
+        <a mat-button routerLink="/post-ads"><b>Post Ads</b> </a>
+        <a mat-button routerLink="/faq"><b>FAQ</b></a>
+        <a mat-button routerLink="/contactus"><b>Conact Us</b></a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <span>
+        <img src="/src/assets/image3.png" alt="">
+          <a mat-button routerLink="/menu"><b>Home</b> </a>
+          <a mat-button routerLink="/aboutus"><b>About Us</b> </a>
+          <a mat-button routerLink="/post-ads"><b>Post Ads</b> </a>
+          <a mat-button routerLink="/faq"><b>FAQ</b></a>
+          <a mat-button routerLink="/contactus"><b>Conact Us</b></a><span>&nbsp;</span>
+          <a mat-stroked-button routerLink="/login"> <b>Login</b> </a>
+          <a mat-raised-button color="warn" routerLink="/register"><b>Register</b> </a>
+      </span>
+    </mat-toolbar>
+    <!-- Add Content Here -->
+  </mat-sidenav-content>
+</mat-sidenav-container>

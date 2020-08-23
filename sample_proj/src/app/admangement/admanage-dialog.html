@@ -1,0 +1,60 @@
+<div class="ad-manag">
+  <h2>Ad Name</h2>
+    <mat-form-field>
+      <mat-select [(ngModel)]="selected" (selectionChange)="selectedFunc(selected)">
+        <mat-option *ngFor="let place of places" [value]="place.name">{{ place.name }}</mat-option>
+      </mat-select>
+    </mat-form-field>
+</div>
+
+<mat-list>
+  <h1 mat-subheader>{{selected}}</h1>
+  <mat-list-item *ngFor="let selectedValue of selectedValues">
+    <h4 mat-line>{{selectedValue}}</h4>
+  </mat-list-item>
+  <mat-list-item *ngIf="selectedValues.length">
+    <button mat-mini-fab (click)="expand()">
+      <mat-icon aria-label="Example icon-button with a heart icon">add</mat-icon>
+    </button>
+  </mat-list-item>
+</mat-list>
+<div class="form-list">
+  <mat-form-field *ngIf="currentCnt" class="selectors-ad">
+    <mat-select placeholder="Country">
+      <mat-option *ngFor="let city of city" [value]="city.value">
+        {{city.viewValue}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <!-- <mat-divider></mat-divider> -->
+  <mat-form-field *ngIf="currentCnt" class="selectors-ad">
+    <mat-select placeholder="City">
+      <mat-option *ngFor="let area of area" [value]="area.value">
+        {{area.viewValue}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <!-- <mat-divider></mat-divider> -->
+  <mat-form-field *ngIf="currentCnt" class="selectors-ad">
+    <mat-select placeholder="Area">
+      <mat-option *ngFor="let area of area" [value]="area.value">
+        {{area.viewValue}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>
+<button type="button" mat-button *ngIf="currentCnt" routerLink="/payments" (click)="onNoClick()">
+  Payment
+</button>
+
+
+
+  <!-- <mat-grid-list cols="3" rowHeight="4:1">
+    <mat-grid-tile
+      *ngFor="let selectedValue of selectedValues"
+      [colspan]="1"
+      [rowspan]="1"
+    >
+    <p>{{selectedValue}}, </p>  
+    </mat-grid-tile>
+  </mat-grid-list> -->

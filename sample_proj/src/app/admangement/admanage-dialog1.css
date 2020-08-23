@@ -1,0 +1,14 @@
+.ad-manag{
+    display: flex;
+    justify-content: space-around
+}
+
+/* .form-list{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.form-list .selectors-ad {
+    width: 25%
+} */

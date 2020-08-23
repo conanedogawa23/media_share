@@ -1,0 +1,56 @@
+.example-toolbar{ 
+    position: sticky;
+    /* margin:  0; */
+    /* display: flex;   */
+    /* justify-content: space-between ; */
+  
+}
+
+ .sidenav-container {
+  height: 100%;
+  justify-content: space-between;
+  
+}
+.example-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  
+  .example-is-mobile .example-toolbar {
+    position: fixed;
+  
+    justify-content: space-between;
+  }
+  
+  h1.example-app-name {
+    margin-left: px;
+
+  }
+  
+ 
+  
+  
+  
+/* .sidenav {
+    width: 200px;
+    box-shadow: 3px 0 6px rgba(0,0,0,.24);
+}  */
+
+ .button-div {
+     position:sticky;
+    display: flex;
+    justify-content: space-evenly;
+    /* justify-content: last baseline */
+}
+
+
+
+.tool-bar{
+    color: coral;
+    
+}

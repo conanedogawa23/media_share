@@ -1,0 +1,32 @@
+<h1 class="mat-title" style="text-align: center">OLA</h1>
+<mat-list role="list">
+    <mat-list-item role="listitem">Upload Date: 2/10/2018</mat-list-item>
+    <mat-list-item role="listitem">Approved Date: 4/10/2018</mat-list-item>
+    <mat-list-item role="listitem">Subscription: Premium</mat-list-item>
+    <mat-list-item role="listitem">Amount: $10000</mat-list-item>
+    <mat-list-item role="listitem">Number of Reapprovals :3</mat-list-item>
+    <mat-list-item role="listitem">
+      Places selected: 
+      <mat-form-field>
+          <mat-select [(ngModel)]="selected" (selectionChange)="selectedFunc(selected)">
+            <mat-option *ngFor="let place of places" [value]="place.name">{{ place.name }}</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <mat-list>
+            <h1 mat-subheader>{{selected}}</h1>
+            <mat-list-item *ngFor="let selectedValue of selectedValues">
+              <h4 mat-line>{{selectedValue}}</h4>
+            </mat-list-item>
+        </mat-list>
+
+      <mat-form-field>
+          <mat-select [(value)]="selected1">
+            <mat-option>None</mat-option>
+            <mat-option value="Hyderabad">Hyderabad</mat-option>
+         </mat-select>
+        </mat-form-field>
+    </mat-list-item>
+    <p>You selected city: {{selected}} {{selected1}}</p>
+</mat-list>
+<button type="button" mat-button color="primary" >Cancel</button>

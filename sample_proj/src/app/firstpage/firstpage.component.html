@@ -1,0 +1,10 @@
+<div [ngClass]="{'handset-full-page':(isHandset$ | async), 'full-page': !(isHandset$ | async)}">
+  <img src="http://www.adweek.com/files/2015_May/iStock-Unfinished-Business-6.jpg" alt="">
+  <div [ngClass]="{'top':(isHandset$ | async), 'left': !(isHandset$ | async)}">
+    <button type="button" mat-raised-button color="primary" routerLink="/adagencyindex">Get Started with Ad Agency</button>
+  </div>
+  <img src="http://www.adweek.com/files/2015_May/iStock-Unfinished-Business-6.jpg" alt="">
+  <div [ngClass]="{'bottom':(isHandset$ | async), 'right': !(isHandset$ | async)}">
+    <button type="button" mat-raised-button color="primary" routerLink="/businessfirm">Get Started width Business Firm</button>
+  </div>
+</div>

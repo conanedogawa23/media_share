@@ -1,0 +1,58 @@
+<div class="exe-aproval">
+  <mat-card>
+    <mat-accordion>
+      <mat-expansion-panel [expanded]="true">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Pending Ads
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <mat-list>
+          <mat-list-item *ngFor="let folder of folders">
+            <mat-icon mat-list-icon>loop</mat-icon>
+            <h4 mat-line>{{folder.name}}</h4>
+            <p mat-line> {{folder.updated | date}} </p>
+            <button mat-button (click)="openDialog()">More</button>
+          </mat-list-item>
+        </mat-list>
+      </mat-expansion-panel>
+    
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Ads Approval
+          </mat-panel-title>
+    
+        </mat-expansion-panel-header>
+        <mat-list>
+            <mat-list-item *ngFor="let folder of folders">
+              <mat-icon mat-list-icon>verified_user</mat-icon>
+              <h4 mat-line>{{folder.name}}</h4>
+              <p mat-line> {{folder.updated | date}} </p>
+              <button mat-button>More</button>
+            </mat-list-item>
+          </mat-list>
+      </mat-expansion-panel>
+    
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Not Approved
+          </mat-panel-title>
+    
+        </mat-expansion-panel-header>
+        <mat-list>
+            <mat-list-item *ngFor="let folder of folders">
+              <mat-icon mat-list-icon>clear</mat-icon>
+              <h4 mat-line>{{folder.name}}</h4>
+              <p mat-line> {{folder.updated | date}} </p>
+              <button mat-button>More</button>
+            </mat-list-item>
+          </mat-list>
+      </mat-expansion-panel>
+    </mat-accordion>   
+  </mat-card>
+  <div class="offers">
+    <img src="https://via.placeholder.com/792" alt="">
+  </div>
+</div>

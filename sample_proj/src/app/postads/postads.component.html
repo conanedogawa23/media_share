@@ -1,0 +1,73 @@
+<img src="https://via.placeholder.com/350x90" width="100%" height="100%" alt="">
+<div>
+    <mat-horizontal-stepper linear #stepper>
+        <mat-step [stepControl]="firstFormGroup">
+            <form [formGroup]="firstFormGroup">
+              <ng-template matStepLabel>Business Details</ng-template>
+              <mat-form-field>
+                <input matInput placeholder="Business Name" formControlName="firstCtrl" required>
+              </mat-form-field>
+                <span>&nbsp;&nbsp;</span>
+              <mat-form-field>
+                  <mat-select placeholder=" Select Subscription">
+                    <mat-option *ngFor="let subscription of subscription" [value]="subscription.value">
+                      {{subscription.viewValue}}
+                    </mat-option>
+                  </mat-select>
+              </mat-form-field>
+                <span>&nbsp;&nbsp;</span>
+              <mat-form-field style="width: 30%;">
+                  <mat-select placeholder="Select Area" [(value)]="toppingSelect" [formControl]="toppings" multiple>
+                    <mat-option *ngFor="let topping of toppingList" [value]="topping">{{topping}}</mat-option>
+                     
+                  </mat-select>
+                </mat-form-field>
+                <div>
+                  <h4>Areas selected: <i>{{toppingSelect}}</i></h4>
+                </div>
+                
+              <div>
+                <button mat-button matStepperNext>Next</button>
+              </div>
+            </form>
+          </mat-step>
+
+          <mat-step [stepControl]="secondFormGroup" [optional]="isOptional">
+              <form [formGroup]="secondFormGroup">
+                <ng-template matStepLabel>Ad File Update</ng-template>
+                <mat-form-field>
+                  <input matInput placeholder="File Name" formControlName="secondCtrl" required>
+                </mat-form-field>
+
+                <form [formGroup]="formGroup" novalidate (ngSubmit)="onSubmit()">
+                    <input type="file" id="file" (change)="handleFileInput($event.target.files)"/>
+                    <!-- <button type="submit" [disabled]="formGroup.invalid || formGroup.prestine">Submit</button> -->
+                  </form>
+                <div>
+                  <button mat-button matStepperPrevious>Back</button>
+                  <button mat-button matStepperNext>Next</button>
+                </div>
+              </form>
+          </mat-step>
+
+          <mat-step [stepControl]="thirdFormGroup" [optional]="isOptional">
+              <form [formGroup]="thirdFormGroup">
+                <ng-template matStepLabel>Payment</ng-template>
+                <!-- <button type="button" mat-raised-button color="primary" routerLink="/payments">Payment</button> -->
+                <div>
+                  <button mat-button matStepperCancal>Cancal</button>
+                  <button mat-button matStepperNext routerLink="/payments">Payment</button>
+                </div>
+              </form>
+            </mat-step>
+
+            <mat-step>
+                <ng-template matStepLabel>Done</ng-template>
+                You Payment is Sucessfull .
+                <div>
+                  <button mat-button matStepperPrevious>Back</button>
+                  <button mat-button (click)="stepper.reset()">Reset</button>
+                </div>
+              </mat-step>
+    </mat-horizontal-stepper> 
+</div>

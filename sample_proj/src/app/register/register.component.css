@@ -1,0 +1,25 @@
+.example-container{
+    background: white;
+}
+.example-container {
+    text-align: center;
+  }
+  
+  .example-container mat-card{
+    display: inline-flex;
+    flex-direction: column;
+    min-width: 40%;
+    max-width: 400px;
+  }
+  
+  .button-login{
+   display: flex;
+   justify-content: space-between
+  }
+  
+  body{
+    background-color: blue;
+  }
+  
+  
+  

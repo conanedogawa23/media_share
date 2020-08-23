@@ -1,0 +1,53 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport="true" [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+    [mode]="(isHandset$ | async) ? 'over' : 'side'">
+    <mat-toolbar color="primary">Menu</mat-toolbar>
+    <mat-nav-list>
+      <a mat-list-item href="#">Home </a>
+      <a mat-list-item href="#">Contact</a>
+      <a mat-list-item href="#">About us</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="warm" >
+      <mat-toolbar-row class="toolbar-div">
+        <!-- <div  class="exe-nav-img"> -->
+        
+        <img *ngIf="!(isHandset$ | async)" routerLink="" src="../../assets/image1.png" width="20%" height="55px" alt="">
+        <!-- </div> -->
+        <div *ngIf="(isHandset$ | async)">
+          <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()">
+            <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+          </button>
+        </div>
+        <div *ngIf="!(isHandset$ | async)" class="exe-nav">
+          <button type="button" mat-button  routerLink="/home"><b>Home</b></button>
+          <button type="button" mat-button routerLink="/aboutus"><b>About us</b></button>
+          <button type="button" mat-button routerLink="/contact"><b>Contact</b></button>
+          <button type="button" mat-button routerLink="/postads"><b>Post Ads</b></button>
+  
+          <button type="button" mat-stroked-button  routerLink="/login">Login</button><span>&nbsp;</span>
+          <button type="button" mat-raised-button  color="warn" routerLink="/register">Register</button>
+        </div>
+        <img *ngIf="(isHandset$ | async)" routerLink="" src="../../assets/image1.png" width="35%" height="45px" alt="">
+        <div *ngIf="(isHandset$ | async)" class="more-vert">
+          <button type="button" mat-icon-button [matMenuTriggerFor]="menu">
+            <mat-icon>more_vert</mat-icon>
+          </button>
+          <mat-menu #menu="matMenu">
+            <button mat-menu-item>
+              <mat-icon>settings</mat-icon>
+              <span>Settings</span>
+            </button>
+            <button mat-menu-item>
+              <mat-icon>notifications</mat-icon>
+              <span>Alerts</span>
+            </button>
+          </mat-menu>
+        </div>
+      </mat-toolbar-row>
+      
+    </mat-toolbar>
+    
+  </mat-sidenav-content>
+</mat-sidenav-container>

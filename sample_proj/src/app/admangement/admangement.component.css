@@ -1,0 +1,41 @@
+.exe-admag {
+  display: flex;
+  justify-content: space-around;    
+}
+
+/* .example-card {
+  width: 20%;
+} */
+  
+/* .example-header-image {
+  
+} */
+
+/* .example-card {
+  width: 25%;
+} */
+
+.ad-manage-card-holder {
+  display: flex;
+  justify-content: space-around;
+  /* flex-direction: column */
+}
+
+.ad-manage-card-holder .example-card {
+  width: 25%
+}
+
+.handset-ad-manage-card-holder {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column
+}
+
+.handset-ad-manage-card-holder .example-card {
+  max-width: 400px
+}
+.exe-card-info{
+  display: flex;
+  justify-content: space-around;
+  max-width: 100%
+}

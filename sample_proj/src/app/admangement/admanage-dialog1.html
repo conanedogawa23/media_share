@@ -1,0 +1,38 @@
+<div class="ad-manag">
+    <h2>Ad Name</h2>
+    <mat-form-field appearance="outline">
+        <mat-select [(ngModel)]="selected" (selectionChange)="selectedFunc(selected)">
+            <mat-option *ngFor="let place of places" [value]="place.name">{{ place.name }}</mat-option>
+        </mat-select>
+    </mat-form-field>
+</div>
+
+<mat-list>
+    <h1 mat-subheader>{{selected}}</h1>
+    <mat-list-item *ngFor="let selectedValue of selectedValues">
+        <h4 mat-line>{{selectedValue}}</h4>
+    </mat-list-item>
+    <mat-list-item *ngIf="selectedValues.length">
+        <button type="button" mat-raised-button color="primary" (click)="expand1()">
+            Change Subscription
+        </button>
+    </mat-list-item>
+</mat-list>
+
+<div class="form-list">
+    <mat-form-field *ngIf="currentCnt" class="selectors-ad">
+        <mat-select [(value)]="selected">
+            <mat-option>None</mat-option>
+            <mat-option value="Standard">Standard</mat-option>
+            <mat-option value="Normal">Normal</mat-option>
+            <mat-option value="Premium">Premium</mat-option>
+        </mat-select>
+    </mat-form-field>
+    <p *ngIf="currentCnt" class="selectors-ad">You selected: {{selected}}</p>
+</div>
+
+<div>
+    <button type="button" mat-raised-button color="primary" *ngIf="currentCnt" routerLink="/payments">
+        Payment
+    </button>
+</div>

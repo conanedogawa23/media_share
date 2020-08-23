@@ -1,0 +1,106 @@
+<div class="reg-card">
+    <mat-vertical-stepper linear #stepper>
+      <mat-step [stepControl]="firstFormGroup" [editable]="isEditable">
+        <form [formGroup]="firstFormGroup">
+            <ng-template matStepLabel>Personal Profile</ng-template>
+          <mat-form-field>
+              <input matInput placeholder="First name" formControlName="firstCtrl" required>
+          </mat-form-field>
+            <span>&nbsp;&nbsp;</span>
+          <mat-form-field>
+              <input matInput placeholder="Last name" formControlName="firstCtrl" required>
+          </mat-form-field>
+          <span>&nbsp;&nbsp;</span>
+          <mat-form-field>
+              <input matInput placeholder="User name" formControlName="firstCtrl" required>
+          </mat-form-field>
+          <span>&nbsp;&nbsp;</span>
+          <mat-form-field>
+              <input matInput placeholder="Email" formControlName="firstCtrl" required>
+          </mat-form-field>
+          <span>&nbsp;&nbsp;</span>          
+          <mat-form-field>
+              <input matInput placeholder="Password" formControlName="firstCtrl" required>
+          </mat-form-field>
+          <span>&nbsp;&nbsp;</span>
+          <mat-form-field>
+              <input matInput placeholder="Confirm Password" formControlName="firstCtrl" required>
+          </mat-form-field>
+          <div>
+              <button mat-button matStepperNext>Next</button>
+          </div>
+        </form>
+      </mat-step>
+
+      <mat-step [stepControl]="secondFormGroup" [editable]="isEditable">
+          <form [formGroup]="secondFormGroup">
+            <ng-template matStepLabel>Business Profile</ng-template>
+            <mat-form-field>
+              <input matInput placeholder="Business Name" formControlName="secondCtrl" required>
+            </mat-form-field>
+            <span>&nbsp;&nbsp;</span>
+            <mat-form-field>
+                <input matInput placeholder="Website Address" formControlName="secondCtrl" required>
+            </mat-form-field>
+            <span>&nbsp;&nbsp;</span>
+            <mat-form-field>
+                <mat-select placeholder="Country">
+                  <mat-option *ngFor="let country of country" [value]="country.value">
+                    {{country.viewValue}}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+              <span>&nbsp;&nbsp;</span>
+              <mat-form-field>
+                  <mat-select placeholder="State">
+                    <mat-option *ngFor="let state of state" [value]="state.value">
+                      {{state.viewValue}}
+                    </mat-option>
+                  </mat-select>
+              </mat-form-field>
+              <span>&nbsp;&nbsp;</span>
+              <mat-form-field>
+                  <mat-select placeholder="City">
+                    <mat-option *ngFor="let city of city" [value]="city.value">
+                      {{city.viewValue}}
+                    </mat-option>
+                  </mat-select>
+              </mat-form-field>
+               <span>&nbsp;&nbsp;</span>
+            <mat-form-field>
+                <input matInput placeholder="PinNumber" formControlName="secondCtrl" required>
+            </mat-form-field>
+            <div>
+              <button mat-button matStepperPrevious>Back</button>
+              <button mat-button matStepperNext>Next</button>
+            </div>
+          </form>
+        </mat-step>
+
+        <mat-step [stepControl]="thirdFormGroup" [editable]="isEditable">
+            <form [formGroup]="thirdFormGroup">
+              <ng-template matStepLabel>Email Verification</ng-template>
+              <mat-form-field>
+                <input matInput placeholder="Email" formControlName="thirdCtrl" required>
+              </mat-form-field>
+              <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+              <mat-form-field appearance="outline">
+                  <input matInput placeholder="OTP" formControlName="thirdCtrl" required>
+                </mat-form-field>
+              <div>
+                <button mat-button matStepperPrevious>Back</button>
+                <button mat-button matStepperNext>Next</button>
+              </div>
+            </form>
+          </mat-step>
+
+          <mat-step>
+              <ng-template matStepLabel>Done</ng-template>
+              You Sucessfully Register
+              <div>
+                <button mat-button matStepperPrevious>Back</button>
+                <button mat-button (click)="stepper.reset()">Reset</button>
+              </div>
+          </mat-step>
+    </mat-vertical-stepper>
+</div>

@@ -1,0 +1,86 @@
+<!-- <div class="grid-container">  
+    <h1 class="mat-h1">Dashboard</h1>  
+    <mat-grid-list cols="2" rowHeight="350px" >  
+      <mat-grid-tile *ngFor="let card of cards" [colspan]="card.cols" [rowspan]="card.rows">  
+        <mat-card class="dashboard-card">  
+          <mat-card-header>  
+            <mat-card-title>  
+              {{card.title}}  
+              <button mat-icon-button class="more-button" [matMenuTriggerFor]="menu" aria-label="Toggle menu">  
+                <mat-icon>more_vert</mat-icon>  
+              </button>  
+              <mat-menu #menu="matMenu" xPosition="before">  
+                <button mat-menu-item>Expand</button>  
+                <button mat-menu-item>Remove</button>  
+              </mat-menu>  
+            </mat-card-title>  
+          </mat-card-header>  
+          <mat-card-content class="dashboard-card-content">  
+            <div>
+            </div>  
+          </mat-card-content>  
+        </mat-card>  
+      </mat-grid-tile>  
+    </mat-grid-list>  
+  </div> -->
+  <!-- <mat-card > 
+    <h1>Dashboard</h1>
+    <mat-card>
+      
+       <table>
+         
+         <tr>
+           <h4><td>Active Ads</td></h4> 
+         </tr>
+         <tr>
+           <h4><td>Pending Ads</td></h4> 
+          </tr>
+          <tr>
+             <h4><td>Exprired Ads</td></h4> 
+            </tr>
+            <tr>
+               <h2><td>Total Ads</td></h2> 
+              </tr>
+       </table>
+    </mat-card>
+    <mat-card>
+    
+  </mat-card> -->
+  <mat-accordion>
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <h2>Dashboard</h2>
+          </mat-panel-title>
+          <mat-panel-description>
+            <!-- Type your name and age -->
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+    
+        <mat-form-field>
+          <input type="text" matInput placeholder="First name">
+        </mat-form-field><br>
+    
+        <mat-form-field>
+          <input matInput placeholder="Age">
+        </mat-form-field>
+      </mat-expansion-panel>
+      <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              <h2>Dashboard</h2>
+            </mat-panel-title>
+            <mat-panel-description>
+              <!-- Type your name and age -->
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+      
+          <mat-form-field>
+            <input type="text" matInput placeholder="First name">
+          </mat-form-field><br>
+      
+          <mat-form-field>
+            <input matInput placeholder="Age">
+          </mat-form-field>
+        </mat-expansion-panel>
+</mat-accordion>
